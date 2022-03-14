@@ -7,15 +7,15 @@ import { graphql } from "./api.js";
  */
 serve((req) => {
   const routes = {
-    "/": serveStatic("./app/public/index.html", "text/html"),
-    "/favicon.png": serveStatic("./app/public/favicon.png", "image/png"),
-    "/hero.svg": serveStatic("./app/public/hero.svg", "image/svg+xml"),
+    "/": serveStatic("./public/index.html", "text/html"),
+    "/favicon.png": serveStatic("./public/favicon.png", "image/png"),
+    "/hero.svg": serveStatic("./public/hero.svg", "image/svg+xml"),
     "/build/bundle.css": serveStatic(
-      "./app/public/build/bundle.css",
+      "./public/build/bundle.css",
       "text/css",
     ),
     "/build/bundle.js": serveStatic(
-      "./app/public/build/bundle.js",
+      "./public/build/bundle.js",
       "text/javascript",
     ),
     "/graphql": graphql,

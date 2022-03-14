@@ -10279,11 +10279,11 @@ const graphql1 = async (req)=>await GraphQLHTTP({
 ;
 serve((req)=>{
     const routes = {
-        "/": serveStatic("./app/public/index.html", "text/html"),
-        "/favicon.png": serveStatic("./app/public/favicon.png", "image/png"),
-        "/hero.svg": serveStatic("./app/public/hero.svg", "image/svg+xml"),
-        "/build/bundle.css": serveStatic("./app/public/build/bundle.css", "text/css"),
-        "/build/bundle.js": serveStatic("./app/public/build/bundle.js", "text/javascript"),
+        "/": serveStatic("./public/index.html", "text/html"),
+        "/favicon.png": serveStatic("./public/favicon.png", "image/png"),
+        "/hero.svg": serveStatic("./public/hero.svg", "image/svg+xml"),
+        "/build/bundle.css": serveStatic("./public/build/bundle.css", "text/css"),
+        "/build/bundle.js": serveStatic("./public/build/bundle.js", "text/javascript"),
         "/graphql": graphql1
     };
     const { pathname  } = new URL(req.url);
